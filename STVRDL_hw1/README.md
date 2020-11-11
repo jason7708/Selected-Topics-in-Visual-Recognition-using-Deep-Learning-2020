@@ -1,4 +1,4 @@
-# car brand classification  
+# Car brand classification  
 16,185 car images belonging to 196 classes (train: 11,185, test:5000)  
 
 # Getting start  
