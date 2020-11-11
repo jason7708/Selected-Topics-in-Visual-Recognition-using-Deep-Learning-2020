@@ -57,7 +57,7 @@ for X, _ in test_loader:
     preds += pred.tolist()
 ids = sorted(os.listdir(os.path.join('./Data', 'test/unknown')))
 
-with open('submission_res_f.csv', 'w') as f:
+with open('submission_testpep8.csv', 'w') as f:
     f.write('id,label' + '\n')
     for i, output in zip(ids, preds):
         for cat, idx in train_set.class_to_idx.items():

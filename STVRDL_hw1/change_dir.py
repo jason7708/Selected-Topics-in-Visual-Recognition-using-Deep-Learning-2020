@@ -6,7 +6,7 @@ import shutil
 def mkdir_if_not_exist(path):
     if not os.path.exists(os.path.join(*path)):
         os.makedirs(os.path.join(*path))
-#Data
+# Data
 # | train
 # |   | category1
 # |   |     | xxx.jpg
@@ -48,14 +48,19 @@ for i, file_name in enumerate(train_imgs):
     image_lbl = id2label[int(image_id)]
     if i < valid_size:  # valid data
         mkdir_if_not_exist([new_data_dir, 'valid', image_lbl])
-        shutil.copy(os.path.join('training_data/training_data', file_name), os.path.join(new_data_dir, 'valid', image_lbl))
+        shutil.copy(os.path.join('training_data/training_data', file_name),
+                    os.path.join(new_data_dir, 'valid', image_lbl))
     else:   # train data
         mkdir_if_not_exist([new_data_dir, 'train', image_lbl])
-        shutil.copy(os.path.join('training_data/training_data', file_name), os.path.join(new_data_dir, 'train', image_lbl))
+        shutil.copy(os.path.join('training_data/training_data', file_name),
+                    os.path.join(new_data_dir, 'train', image_lbl))
     # train+valid data
     mkdir_if_not_exist([new_data_dir, 'train_valid', image_lbl])
-    shutil.copy(os.path.join('training_data/training_data', file_name), os.path.join(new_data_dir, 'train_valid', image_lbl))
+    shutil.copy(os.path.join('training_data/training_data', file_name),
+                os.path.join(new_data_dir, 'train_valid', image_lbl))
+
 # test data
 mkdir_if_not_exist([new_data_dir, 'test', 'unknown'])
 for test_imgs in os.listdir('./testing_data/testing_data'):
-    shutil.copy(os.path.join('testing_data/testing_data', test_imgs), os.path.join(new_data_dir, 'test', 'unknown'))
+    shutil.copy(os.path.join('testing_data/testing_data', test_imgs),
+                os.path.join(new_data_dir, 'test', 'unknown'))
