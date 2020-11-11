@@ -7,7 +7,7 @@ import torchvision.models as models
 from torch.utils.tensorboard import SummaryWriter
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-writer = SummaryWriter('./testpep8')
+writer = SummaryWriter('./graph')
 
 if __name__ == '__main__':
     net = models.resnet18(pretrained=True)
@@ -125,5 +125,5 @@ if __name__ == '__main__':
             'Validation/error', 100.*(1-(correct/len(valid_set))), epoch)
         writer.flush()
 
-    PATH = './testpep8.pth'
+    PATH = './my_model.pth'
     torch.save(net.state_dict(), PATH)

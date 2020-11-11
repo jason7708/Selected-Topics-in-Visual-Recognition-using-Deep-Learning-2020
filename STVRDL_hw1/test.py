@@ -16,9 +16,7 @@ net = models.resnet18(pretrained=False)
 in_fea = net.fc.in_features
 net.fc = nn.Linear(in_fea, 196)
 
-# net = models.vgg16_bn(pretrained=True)
-# last_layer = nn.Linear(net.classifier[6].in_features, 196)
-net.load_state_dict(torch.load('./res_novalid.pth'))
+net.load_state_dict(torch.load('./my_model.pth'))
 net.to(device)
 
 train_transform = torchvision.transforms.Compose([
@@ -46,7 +44,6 @@ test_set = torchvision.datasets.ImageFolder(
 test_loader = torch.utils.data.DataLoader(
         test_set, batch_size=1, shuffle=False, num_workers=2)
 
-# print(train_set.class_to_idx)
 net.eval()
 preds = []
 for X, _ in test_loader:
@@ -57,7 +54,7 @@ for X, _ in test_loader:
     preds += pred.tolist()
 ids = sorted(os.listdir(os.path.join('./Data', 'test/unknown')))
 
-with open('submission_testpep8.csv', 'w') as f:
+with open('submission.csv', 'w') as f:
     f.write('id,label' + '\n')
     for i, output in zip(ids, preds):
         for cat, idx in train_set.class_to_idx.items():
