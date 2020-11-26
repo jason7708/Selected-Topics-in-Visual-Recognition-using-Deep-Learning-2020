@@ -31,5 +31,5 @@ you can get the output image in output/ , output json in output/test/
 ### speed benchmark
 see PyTorch-YOLOv3/hw2.ipynb (some code from detect.py to test model speed on colab)
 # Reference  
-yolov3 code from (https://github.com/eriklindernoren/PyTorch-YOLOv3)
+yolov3 code from (https://github.com/eriklindernoren/PyTorch-YOLOv3)  
 data preprocess (https://github.com/StephenEkaputra/SVHN-YOLOV3-CUSTOM)
