@@ -26,7 +26,9 @@ add class names to data/custom/classes.names (one row per class name)
 if you have pretrained weights add --pretrained_weights <your weights>  
 ### test  
 put test/ to STVRDL_hw2/PyTorch-YOLOv3/data/custom/images/test  
-run `python3 detect.py --image_folder data/custom/images/test --model_def config/yolov3-custom.cfg --weights_path <your weights> --class_path data/custom/classes.names`  
+`python3 detect.py --image_folder data/custom/images/test --model_def config/yolov3-custom.cfg --weights_path <your weights> --class_path data/custom/classes.names`  
+### speed benchmark
+see PyTorch-YOLOv3/hw2.ipynb
 # Reference  
 yolov3 code from (https://github.com/eriklindernoren/PyTorch-YOLOv3)
 data preprocess (https://github.com/StephenEkaputra/SVHN-YOLOV3-CUSTOM)
