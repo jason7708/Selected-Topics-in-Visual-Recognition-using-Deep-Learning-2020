@@ -5,12 +5,12 @@ Street View House Numbers dataset (train: 33402, test: 13068)
 <https://drive.google.com/drive/u/0/folders/1Ob5oT9Lcmz7g5mVOcYH3QugA7tV3WsSl>  
 put train/ in STVRDL_hw2/  
 ### change annotation file (.mat) to yolov3 form (txt file each row with[class x_center y_center width height](0~1 range))  
-run `python3 To_yolo_1.py`  (get the label data in .mat)  
-    `python3 To_yolo_2.py`  (transform to 0 ~ 1 range)  
+`python3 To_yolo_1.py`  (get the label data in .mat)  
+`python3 To_yolo_2.py`  (transform to 0 ~ 1 range)  
 then we can get all .txt training label file  
 put them in STVRDL_hw2/PyTorch-YOLOv3/data/custom/labels
 ### decide train and valid image  
-run `python3 add_filename.py`  
+`python3 add_filename.py`  
 get train.txt (the path of training images)  
     valid.txt (the path of valid images)  
 put train.txt and valid.txt to STVRDL_hw2/PyTorch-YOLOv3/data/custom/  
