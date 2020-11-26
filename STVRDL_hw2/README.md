@@ -29,7 +29,7 @@ put test data to STVRDL_hw2/PyTorch-YOLOv3/data/custom/images/test
 `python3 detect.py --image_folder data/custom/images/test --model_def config/yolov3-custom.cfg --weights_path <your weights> --class_path data/custom/classes.names`  
 you can get the output image in output/ , output json in output/test/
 ### speed benchmark
-see PyTorch-YOLOv3/hw2.ipynb
+see PyTorch-YOLOv3/hw2.ipynb (some code from detect.py to test model speed on colab)
 # Reference  
 yolov3 code from (https://github.com/eriklindernoren/PyTorch-YOLOv3)
 data preprocess (https://github.com/StephenEkaputra/SVHN-YOLOV3-CUSTOM)
