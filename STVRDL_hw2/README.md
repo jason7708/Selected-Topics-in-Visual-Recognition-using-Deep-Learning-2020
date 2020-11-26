@@ -25,7 +25,7 @@ add class names to data/custom/classes.names (one row per class name)
 `python3 train.py --model_def config/yolov3-custom.cfg --data_config config/custom.data --epochs 10`  
 if you have pretrained weights add --pretrained_weights <your weights>  
 ### test  
-put test/ to STVRDL_hw2/PyTorch-YOLOv3/data/custom/images/test  
+put test data to STVRDL_hw2/PyTorch-YOLOv3/data/custom/images/test  
 `python3 detect.py --image_folder data/custom/images/test --model_def config/yolov3-custom.cfg --weights_path <your weights> --class_path data/custom/classes.names`  
 you can get the output image in output/ , output json in output/test/
 ### speed benchmark
