@@ -19,6 +19,7 @@ In `AdelaiDet/datasets/`
 `python3 prepare_thing_sem_from_instance.py --dataset-name img_data`  
 
 ###  Train  
+In `AdelaiDet/datasets/`  
 ```  
 OMP_NUM_THREAD=1 python3 tools/train_net.py \  
 --config-file configs/BlendMask/R_50_1x_my.yaml \  
@@ -27,6 +28,7 @@ OUTPUT_DIR training_dir/blendmask_R_50_1x
 ```  
 OUTPUT_DIR: path to save the result  
 ###  Test  
+In `AdelaiDet/datasets/`  
 ```  
 OMP_NUM_THREAD=1 python3 tools/train_net.py \  
 --config-file configs/BlendMask/R_50_1x_my.yaml \  
