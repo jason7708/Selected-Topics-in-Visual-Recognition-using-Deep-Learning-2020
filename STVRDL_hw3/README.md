@@ -1,7 +1,7 @@
 # Instance segmentation  
 Tiny PASCAL VOC dataset (1,349 training images, 100 test images with 20 common object classes)  
 
-#Getting start  
+# Getting start  
 ###  Data
 put your data in `AdelaiDet/datasets/`  
 ```
