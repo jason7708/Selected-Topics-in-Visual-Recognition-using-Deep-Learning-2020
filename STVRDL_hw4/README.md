@@ -15,3 +15,4 @@ change the save directory and image path in `SRFBN_CVPR19/scripts/Prepare_TrainD
 1. place your LR test images to SRFBN_CVPR19/results/LR/MyImage  
 2. Edit SRFBN_CVPR19/options/test/test_SRFBN_example.json for your needs according to SRFBN_CVPR19/options/test/README.md  
 3. `python test.py -opt options/test/test_SRFBN_example.json`  
+4. You can find the reconstruction images in ./results  
